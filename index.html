@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Speech to text</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body{
+            padding-top:30px;
+        }
+        h4{
+            padding:15px;
+        }
+    </style>
+    <!-- Bootstrap core CSS -->
+    
+</head>
+<body ng-controller="appCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Speech to text.</h4>
+                <hr />
+            </div>
+            <div class="col-md-6">                
+                <div class="col-md-12">
+                    <button class="btn btn-primary" ng-disabled="startBtnDisabled" ng-click="onClickSpeak()" type="button">Speak</button>
+                </div><br />
+                <div class="col-md-12">
+                    <textarea class="form-control" rows="5" ng-model="outputText"></textarea>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/BingSpeech.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
